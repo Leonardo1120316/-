@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.usercenter.mapper.ClubMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.usercenter.model.domain.Club">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="manageid" column="manageid" jdbcType="BIGINT"/>
+            <result property="clubname" column="clubname" jdbcType="VARCHAR"/>
+            <result property="avatarUrl" column="avatarUrl" jdbcType="VARCHAR"/>
+            <result property="student" column="student" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="clubStatus" column="clubStatus" jdbcType="INTEGER"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+            <result property="introduce" column="introduce" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,manageid,clubname,
+        avatarUrl,student,email,
+        userStatus,createTime,updateTime,
+        isDelete,introduce
+    </sql>
+</mapper>
